@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgBackFile"
+        android:layout_width="45dp"
+        android:layout_height="match_parent"
+        android:padding="17dp"
+        app:srcCompat="@drawable/ic_back"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/imgBackFile"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/opent_audio_file"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+</RelativeLayout>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- /////////////////////////////////
+    // 1) Base Set
+    ///////////////////////////////// -->
+
+
+    <ConstraintSet android:id="@+id/set1_base">
+        <Constraint android:id="@id/fab">
+            <Layout
+                android:layout_width="@dimen/fab_size"
+                android:layout_height="@dimen/fab_size"
+                android:layout_marginEnd="@dimen/fab_margin"
+                android:layout_marginBottom="@dimen/fab_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <CustomAttribute
+                app:attributeName="radius"
+                app:customDimension="@dimen/fab_radius" />
+
+            <CustomAttribute
+                app:attributeName="cardElevation"
+                app:customDimension="@dimen/fab_elevation" />
+        </Constraint>
+
+        <Constraint android:id="@id/filter_icon">
+            <Layout
+                android:layout_width="@dimen/fab_size"
+                android:layout_height="@dimen/fab_size"
+                app:layout_constraintBottom_toBottomOf="@id/fab"
+                app:layout_constraintEnd_toEndOf="@id/fab"
+                app:layout_constraintStart_toStartOf="@id/fab" />
+
+            <CustomAttribute
+                app:attributeName="colorFilter"
+                app:customColorValue="@color/c_blue_text_dialog" />
+        </Constraint>
+
+        <Constraint android:id="@id/close_icon">
+            <Layout
+                android:layout_width="@dimen/fab_size"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/bottom_bar_card_view"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/bottom_bar_card_view" />
+            <PropertySet android:visibility="invisible" />
+            <Transform android:rotation="0" />
+        </Constraint>
+    </ConstraintSet>
+
+    <!-- /////////////////////////////////
+    // 2) Path Set
+    ///////////////////////////////// -->
+
+    <ConstraintSet
+        android:id="@+id/set2_path"
+        app:deriveConstraintsFrom="@id/set1_base">
+        <Constraint android:id="@id/fab">
+            <Layout
+                android:layout_width="@dimen/fab_size"
+                android:layout_height="@dimen/fab_size"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/filter_sheet_placeholder"
+                app:layout_constraintEnd_toEndOf="@id/filter_sheet_placeholder"
+                app:layout_constraintStart_toStartOf="@id/filter_sheet_placeholder"
+                app:layout_constraintTop_toTopOf="@id/filter_sheet_placeholder" />
+
+            <CustomAttribute
+                app:attributeName="cardElevation"
+                app:customDimension="@dimen/fab_elevation_2" />
+        </Constraint>
+    </ConstraintSet>
+
+    <!-- /////////////////////////////////
+    // 3) Reveal Set
+    ///////////////////////////////// -->
+
+    <ConstraintSet
+        android:id="@+id/set3_reveal"
+        app:deriveConstraintsFrom="@id/set2_path">
+        <Constraint android:id="@id/fab">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="-20dp"
+                app:layout_constraintBottom_toBottomOf="@id/filter_sheet_placeholder"
+                app:layout_constraintEnd_toEndOf="@id/filter_sheet_placeholder"
+                app:layout_constraintStart_toStartOf="@id/filter_sheet_placeholder"
+                app:layout_constraintTop_toTopOf="@id/filter_sheet_placeholder" />
+
+            <CustomAttribute
+                app:attributeName="radius"
+                app:customDimension="0dp" />
+            <CustomAttribute
+                app:attributeName="cardBackgroundColor"
+                app:customColorValue="@color/c_blue_text_dialog" />
+
+        </Constraint>
+        <Constraint android:id="@id/filter_icon">
+
+            <Layout
+
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginTop="250dp"
+                android:layout_marginBottom="32dp"
+                app:layout_constraintBottom_toTopOf="@id/bottom_bar_card_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </Constraint>
+
+
+    </ConstraintSet>
+
+    <!-- /////////////////////////////////
+    // 4) Settle Set
+    ///////////////////////////////// -->
+
+    <ConstraintSet
+        android:id="@+id/set4_settle"
+        app:deriveConstraintsFrom="@id/set3_reveal">
+
+        <Constraint android:id="@id/bottom_bar_card_view">
+            <CustomAttribute
+                app:attributeName="cardBackgroundColor"
+                app:customColorValue="@color/c_blue_text_dialog" />
+            <PropertySet android:visibility="visible" />
+        </Constraint>
+        <Constraint android:id="@id/close_icon">
+
+            <Layout
+                android:layout_width="@dimen/fab_size"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/bottom_bar_card_view"
+                app:layout_constraintEnd_toStartOf="@id/guideline1"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toTopOf="@id/bottom_bar_card_view" />
+
+            <PropertySet android:visibility="visible" />
+
+        </Constraint>
+
+        <Constraint android:id="@id/line">
+            <CustomAttribute
+                app:attributeName="cardBackgroundColor"
+                app:customColorValue="@color/c_blue_text_dialog" />
+            <PropertySet android:visibility="visible" />
+        </Constraint>
+
+        <Constraint android:id="@id/btnOpenFile">
+            <Layout
+                android:layout_width="@dimen/fab_size"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/bottom_bar_card_view"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="@id/bottom_bar_card_view"
+                app:srcCompat="@drawable/ic_file" />
+            <PropertySet android:visibility="visible" />
+
+
+        </Constraint>
+
+
+        <Constraint android:id="@id/btnRecoder">
+            <Layout
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginTop="250dp"
+                android:layout_marginBottom="32dp"
+                app:layout_constraintBottom_toTopOf="@id/bottom_bar_card_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+            <PropertySet android:visibility="visible" />
+        </Constraint>
+
+        <Constraint android:id="@id/txt_recorder">
+            <Layout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/filter_sheet_placeholder" />
+            <PropertySet android:visibility="visible" />
+        </Constraint>
+
+        <Constraint android:id="@id/txt_time_recorder">
+            <Layout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="00"
+                app:layout_constraintEnd_toEndOf="@id/filter_sheet_placeholder"
+                app:layout_constraintStart_toStartOf="@id/filter_sheet_placeholder"
+                app:layout_constraintTop_toBottomOf="@id/line" />
+            <PropertySet android:visibility="visible" />
+        </Constraint>
+
+
+        <Constraint android:id="@id/center_line">
+            <Layout
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                app:layout_constraintBottom_toBottomOf="@id/line"
+                app:layout_constraintTop_toTopOf="@id/line" />
+            <PropertySet android:visibility="visible" />
+        </Constraint>
+    </ConstraintSet>
+
+
+    <!--  TRANSITION  -->
+
+    <Transition
+        app:constraintSetEnd="@id/set2_path"
+        app:constraintSetStart="@id/set1_base"
+        app:duration="@integer/pathAnimDuration">
+        <!-- For Arc Path -->
+        <KeyFrameSet>
+
+            <KeyPosition
+                app:framePosition="50"
+                app:keyPositionType="deltaRelative"
+                app:motionTarget="@id/fab"
+                app:percentX="0.85"
+                app:percentY="0.15" />
+
+            <KeyPosition
+                app:framePosition="50"
+                app:keyPositionType="deltaRelative"
+                app:motionTarget="@id/filter_icon"
+                app:percentX="0.85"
+                app:percentY="0.15" />
+
+            <KeyPosition
+                app:framePosition="100"
+                app:keyPositionType="pathRelative"
+                app:motionTarget="@id/line"
+                app:percentX="0.85"
+                app:percentY="0.15" />
+
+        </KeyFrameSet>
+    </Transition>
+
+    <!-- /////////////////////////////////
+    // 2 -> 3: Reveal Transition
+    ///////////////////////////////// -->
+
+    <Transition
+        app:constraintSetEnd="@id/set3_reveal"
+        app:constraintSetStart="@id/set2_path"
+        app:duration="@integer/revealAnimDuration">
+
+        <KeyFrameSet>
+            <KeyAttribute
+                app:framePosition="80"
+                app:motionTarget="@id/fab">
+                <CustomAttribute
+                    app:attributeName="radius"
+                    app:customDimension="160dp" />
+            </KeyAttribute>
+
+            <KeyPosition
+                app:framePosition="80"
+                app:motionTarget="@id/fab"
+                app:percentHeight="1"
+                app:percentWidth="1" />
+
+            <KeyPosition
+                app:framePosition="80"
+                app:keyPositionType="deltaRelative"
+                app:motionTarget="@id/filter_icon"
+                app:percentY="1" />
+        </KeyFrameSet>
+    </Transition>
+
+</MotionScene>

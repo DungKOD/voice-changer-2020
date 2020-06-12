@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="ld_activityScreenTitles">
+        <item>How to use</item>
+        <item>Privacy Policy</item>
+        <item>Share to friends</item>
+        <item>Feedback</item>
+        <item>Rate us 5 star</item>
+        <item>About</item>
+    </string-array>
+
+    <array name="ld_activityScreenIcons">
+        <item>@drawable/ic_st_howtouse</item>
+        <item>@drawable/ic_st_policy</item>
+        <item>@drawable/ic_st_share</item>
+        <item>@drawable/ic_st_feedback</item>
+        <item>@drawable/ic_st_rate</item>
+        <item>@drawable/ic_st_about</item>
+    </array>
+
+</resources>

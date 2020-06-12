@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginTop="7dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginBottom="7dp"
+    app:cardCornerRadius="20dp"
+    android:elevation="8dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:id="@+id/rlItemView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shadow_view_recy"
+        android:elevation="8dp"
+        android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgEff"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/custom_image"
+            android:padding="6dp">
+
+        </com.makeramen.roundedimageview.RoundedImageView>
+
+        <TextView
+            android:id="@+id/txtNameEff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/Later"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_height="350dp">
+
+    <RelativeLayout
+        android:id="@+id/rlPlayView"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/txtNameStorage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtNameEffEct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtNameStorage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:textColor="#B3FFFFFF" />
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="32sp" />
+
+        <RelativeLayout
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_above="@+id/txtTime"
+            android:layout_below="@+id/txtNameEffEct"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:alpha="0.2"
+                android:background="@color/colorWhite" />
+
+            <com.masoudss.lib.WaveformSeekBar
+                android:id="@+id/waveformSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:saveEnabled="false"
+                app:wave_background_color="@color/colorWhite"
+                app:wave_gap="2dp"
+                app:wave_gravity="center"
+                app:wave_min_height="5dp"
+                app:wave_progress_color="@color/blue"
+                app:wave_width="2dp" >
+            </com.masoudss.lib.WaveformSeekBar>
+
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/chronometerPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="56dp"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="#FFF"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RelativeLayout
+            android:id="@+id/rlIcon"
+            android:layout_width="match_parent"
+            android:layout_height="101dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorWhite">
+
+            <RelativeLayout
+                android:id="@+id/rlPlayAudio"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/custum_play">
+
+                <ImageView
+                    android:id="@+id/imgPlayAudio"
+                    android:layout_width="16dp"
+                    android:layout_height="19dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_pause_proccessing"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <ImageView
+                    android:id="@+id/imgStopAudio"
+                    android:layout_width="16dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="21.5dp"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_play_done_1"
+                    tools:ignore="VectorDrawableCompat" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="15dp"
+                android:layout_toLeftOf="@id/rlPlayAudio"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/btnEditFile"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/rip_close"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="@dimen/top_detail_plat"
+                        app:srcCompat="@drawable/ic_reedit"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/edit"
+                        android:textColor="@color/color_play" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnReName"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/rip_close"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="@dimen/top_detail_plat"
+                        app:srcCompat="@drawable/ic_rename"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/reName"
+                        android:textColor="@color/color_play" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toRightOf="@id/rlPlayAudio"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/btnInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/rip_close"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+
+                        android:layout_height="20dp"
+                        android:layout_marginTop="@dimen/top_detail_plat"
+                        app:srcCompat="@drawable/ic_detail"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/info"
+                        android:textColor="@color/color_play" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnShare"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/rip_close"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="@dimen/top_detail_plat"
+                        app:srcCompat="@drawable/ic_st_share_1"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/share"
+                        android:textColor="@color/color_play" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

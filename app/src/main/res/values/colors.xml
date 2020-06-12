@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#0064FF</color>
+
+
+
+
+
+
+
+
+    <color name="c_bg_app">#19212A</color>
+    <color name="c_tool_bar">#19212A</color>
+    <color name="bg_select_activity">#19212A</color>
+    <color name="c_text_color_duration">#A4BEDC</color>
+    <color name="c_item_playing">#40BAD6</color>
+    <color name="c_dot_played">#7CC576</color>
+    <color name="c_bg_play">#1D2835</color>
+    <color name="c_text_config">#585858</color>
+    <color name="c_bg_processing">#7C6AEA</color>
+    <color name="c_bg_process">#2d3050</color>
+    <color name="c_text_quality">#606060</color>
+    <color name="c_view_dialog_info">#F1F1F1</color>
+    <color name="c_dark_text_dialog">#6C7B8D</color>
+    <color name="bg_dialog_setting">#19212A</color>
+    <color name="c_blue_text_dialog">#00C7E2</color>
+    <color name="bg_view">#2D3B4A</color>
+    <color name="c_button_later">#878787</color>
+    <color name="c_bg_sound_playing">#29333F</color>
+    <color name="c_background_processing">#0276ff</color>
+    <color name="c_background_process">#6e6d7b</color>
+    <color name="c_background_processing_1">#448AFF</color>
+
+
+
+
+
+
+
+
+
+    <color name="backgroundStart">#00BCFF</color>
+    <color name="backgroundEnd">#0064FF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorPermission">#212121</color>
+
+    <color name="color_view_alpha">#4D756F6F</color>
+
+    <color name="blue">#0064FF</color>
+
+    <color name="colorStatus">#4D000000</color>
+
+    <color name="colorStatusAlpha">#4D151515</color>
+    <color name="colorStatusAlpha1">#4D302F2F</color>
+    <color name="colorStatusAlpha2">#4D434343</color>
+    <color name="colorStatusAlpha3">#4D707070</color>
+    <color name="colorStatusAlpha4">#4D8C8C8C</color>
+    <color name="colorStatusAlpha5">#4DB3B2B2</color>
+    <color name="colorStatusAlpha6">#4DDAD8D8</color>
+    <color name="colorStatusAlpha7">#8CEDEDED</color>
+
+    <color name="color_button">#00FFEF</color>
+    <color name="colorEffect">#EFFAFF</color>
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#757575</color>
+    <color name="black_text_color">#000000</color>
+    <color name="alpha_50">#80000000</color>
+    <color name="alpha_80">#CCFFFFFF</color>
+    <color name="alpha_F50">#80FFFFFF</color>
+
+    <color name="shadow_hack_level_1">#4DDAD8D8</color>
+    <color name="shadow_hack_level_2">#4DDAD8D8</color>
+    <color name="shadow_hack_level_3">#4DDAD8D8</color>
+    <color name="shadow_hack_level_4">#4DDAD8D8</color>
+    <color name="shadow_hack_level_5">#4DDAD8D8</color>
+    <color name="shadow_hack_level_6">#4DDAD8D8</color>
+    <color name="shadow_hack_level_7">#4DDAD8D8</color>
+    <color name="shadow_hack_level_8">#4DDAD8D8</color>
+    <color name="shadow_hack_level_9">#4DDAD8D8</color>
+    <color name="shadow_hack_level_10">#4DDAD8D8</color>
+
+    <color name="color_play">#4D4D4D</color>
+
+    <!--    100% — FF
+    95% — F2
+    90% — E6
+    85% — D9
+    80% — CC
+    75% — BF
+    70% — B3
+    65% — A6
+    60% — 99
+    55% — 8C
+    50% — 80
+    45% — 73
+    40% — 66
+    35% — 59
+    30% — 4D
+    25% — 40
+    20% — 33
+    15% — 26
+    10% — 1A
+    5%  — 0D
+    0% —  00
+    -->
+</resources>

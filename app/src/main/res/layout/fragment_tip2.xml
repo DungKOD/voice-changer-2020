@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        app:riv_corner_radius_top_right="30dp"
+        app:riv_corner_radius_bottom_right="30dp"
+        android:id="@+id/imvTip"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="166dp"
+        android:scaleType="fitXY"
+        />
+
+    <ImageView
+        android:layout_width="55dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="160dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="400dp"
+        android:rotation="50"
+        app:srcCompat="@drawable/hand_cursor" />
+
+</RelativeLayout>

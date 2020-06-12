@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/toolFile"
+        layout="@layout/layout_toolbar_file"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcFolder"
+        android:layout_below="@+id/toolFile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+       </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>

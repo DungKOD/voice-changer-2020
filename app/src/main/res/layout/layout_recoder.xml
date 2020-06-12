@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/voice_Recording"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:id="@+id/rlContainer"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:layout_below="@+id/txtTitle"
+            android:layout_above="@+id/chronometer"
+            android:background="#00000000">
+
+        </RelativeLayout>
+
+       <RelativeLayout
+           android:layout_below="@+id/txtTitle"
+           android:layout_above="@+id/chronometer"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <View
+               android:id="@+id/viewAnimation"
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:layout_centerVertical="true"
+               android:alpha="0.4"
+               android:background="@color/colorWhite"
+               android:visibility="gone" />
+       </RelativeLayout>
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="#FFF"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="140dp"
+            android:textSize="32sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rlViewRecorder"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="44dp"
+            android:layout_width="80dp"
+            android:background="#00000000"
+            android:layout_height="80dp"/>
+
+
+        <RelativeLayout
+            android:layout_toLeftOf="@id/rlViewRecorder"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="44dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/btnOpenFile"
+                android:layout_centerHorizontal="true"
+                android:layout_width="70dp"
+                android:layout_height="55dp"
+                android:background="@drawable/rip_close"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    app:srcCompat="@drawable/ic_openfile"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/open_File"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_toRightOf="@id/rlViewRecorder"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="44dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/btnClose"
+            android:layout_width="70dp"
+            android:layout_height="55dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rip_close"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                app:srcCompat="@drawable/ic_close_record"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="@string/close"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+        <!--        <com.sound.voiceRecorder.pitchview.PitchView-->
+        <!--            android:id="@+id/pitchRecorder"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="120dp"-->
+        <!--            android:layout_centerInParent="true"-->
+        <!--            android:padding="5dp"/>-->
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

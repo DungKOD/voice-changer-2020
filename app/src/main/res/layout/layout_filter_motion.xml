@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:currentState="@id/set1_base"
+    app:layoutDescription="@xml/scene_filter"
+    app:motionDebug="NO_DEBUG"
+    app:showPaths="true"
+    tools:parentTag="androidx.constraintlayout.motion.widget.MotionLayout">
+
+
+    <LinearLayout
+        android:id="@+id/fab"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:background="@drawable/custom_radius_15"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/filter_icon"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:clickable="true"
+        android:elevation="34dp"
+        android:focusable="true"
+        android:outlineProvider="none"
+        android:padding="16dp"
+        android:scaleType="centerInside"
+        android:tint="@color/c_blue_text_dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_microphone" />
+
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/filter_sheet_placeholder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutDescription="@xml/layout_filter_motion_scene"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottom_bar_card_view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/bottom_bar_height"
+        android:outlineProvider="none"
+        android:visibility="invisible"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="33dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnRecoder"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#F37171"
+        android:visibility="invisible"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar_card_view"
+        app:layout_constraintEnd_toEndOf="@id/filter_sheet_placeholder"
+        app:layout_constraintStart_toStartOf="@id/filter_sheet_placeholder" />
+
+    <ImageView
+        android:id="@+id/close_icon"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rip_close"
+        android:elevation="34dp"
+        android:outlineProvider="none"
+        android:scaleType="centerInside"
+        android:tint="#FFF"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_bar_card_view"
+        app:layout_constraintTop_toTopOf="@id/bottom_bar_card_view"
+        app:srcCompat="@drawable/ic_close" />
+
+    <ImageView
+        android:id="@+id/btnOpenFile"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rip_close"
+        android:elevation="34dp"
+        android:outlineProvider="none"
+        android:scaleType="centerInside"
+        android:tint="#FFF"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_bar_card_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bottom_bar_card_view"
+        app:srcCompat="@drawable/ic_file" />
+
+    <TextView
+        android:id="@+id/txt_recorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="recorder..."
+        android:textColor="@color/colorWhite"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/filter_sheet_placeholder" />
+
+    <TextView
+        android:id="@+id/txt_time_recorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="00"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/btnRecoder"
+        app:layout_constraintEnd_toEndOf="@id/filter_sheet_placeholder"
+        app:layout_constraintStart_toStartOf="@id/filter_sheet_placeholder"
+        app:layout_constraintTop_toBottomOf="@id/line" />
+
+
+    <View
+        android:id="@+id/center_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/colorWhite"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/line"
+        app:layout_constraintTop_toTopOf="@id/line" />
+
+    <RelativeLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="8dp"
+        android:background="#00000000"
+        app:layout_constraintEnd_toEndOf="@id/filter_sheet_placeholder"
+        app:layout_constraintStart_toStartOf="@id/filter_sheet_placeholder"
+        app:layout_constraintTop_toBottomOf="@id/txt_recorder">
+
+    </RelativeLayout>
+</merge>

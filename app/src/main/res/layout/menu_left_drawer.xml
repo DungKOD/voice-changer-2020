@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    >
+
+<LinearLayout
+    android:id="@+id/llView"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgLogoSetting"
+            android:layout_width="93dp"
+            android:layout_gravity="center"
+            android:layout_height="93dp"/>
+
+        <TextView
+            android:textAllCaps="true"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Voice_changer"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="49dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:overScrollMode="never"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="40dp" />
+
+
+</LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/btnViewClose"
+        android:layout_toRightOf="@+id/llView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</RelativeLayout>

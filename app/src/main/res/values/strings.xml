@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">Voice Changer 2020</string>
+    <!--    splash-->
+    <string name="splash_Title1">Welcome to</string>
+    <string name="splash_Title2">Voice Changer</string>
+    <string name="splash_Start">Start</string>
+    <string name="splash_policy"><u>Privacy Policy</u></string>
+    <string name="splash_title_policy">By proceeding you agree with</string>
+
+    <!--    STep-->
+    <string name="step_titleOne">Tap Record button to \nrecord a new Voice</string>
+    <string name="step_titleTwo">Select the sound effect \nto change your voice</string>
+    <string name="step_titleThree">Tap the Save voice effect \nand share to your friends</string>
+    <string name="step1">1</string>
+    <string name="step2">2</string>
+    <string name="step3">3</string>
+
+    <!--    permission-->
+    <string name="permission_Title">Allow <b>Voice Changer</b> to access \nMicrophone and Storage on your device?</string>
+    <string name="permission_Allow">Allow Permission</string>
+    <string name="permission_Setting">Go to setting</string>
+
+    <!--    toolbar-->
+    <string name="toolbar_VoiceChanger">Voice Changer</string>
+    <string name="toolbar_SaveFile">Save File</string>
+    <string name="toolbar_Effect">Voice Effect</string>
+    <string name="toolbar_OpenAudio">Open Audio File</string>
+
+    <string name="close">Close</string>
+    <string name="open_File">Open File</string>
+    <string name="voice_Recording">Voice Recording</string>
+    <string name="recording">Recording…</string>
+    <string name="share">Share</string>
+    <string name="new_Voice">New Voice</string>
+    <string name="try_Again">Try Again</string>
+    <string name="no_Voice">No Voice</string>
+    <string name="no_Voice_Title">Tap to Record Button to record new voice </string>
+
+    <string name="tap_To_Record">Tap to start recording</string>
+    <string name="how_to_use">How to use</string>
+    <string name="Privacy_Policy">Privacy Policy</string>
+    <string name="Share_to_friends">Share to friends</string>
+    <string name="Feedback">Feedback</string>
+    <string name="Rate_us_5_star">Rate us 5 star</string>
+    <string name="About">About</string>
+
+    <string name="about_Version">Version</string>
+    <string name="about_Text">All right copyrighted</string>
+    <string name="check_update">Check update</string>
+    <string name="Later">Later</string>
+    <string name="voice_effect">Voice Effect</string>
+    <string name="save">Save</string>
+
+    <string name="title_Rate">Rate us 5 star</string>
+    <string name="text_Rate">Support us by give 5 stars and write your review</string>
+    <string name="rate_now">Rate now</string>
+    <string name="Locked">Locked</string>
+    <string name="camcel">Cancel</string>
+    <string name="fileName">Enter filename</string>
+    <string name="newVoiceChanger">New Voice Changer</string>
+    <string name="cancel">Cancel</string>
+    <string name="opent_audio_file">Open Audio File</string>
+    <string name="edit">Edit</string>
+    <string name="Re_Edit">Re-Edit</string>
+    <string name="reName">Rename</string>
+    <string name="info">Info</string>
+    <string name="Deail">Detail</string>
+    <string name="delete">Delete</string>
+    <string name="db" />
+
+    <string name="audio_code">Audio code</string>
+    <string name="sample_rate">Sample rate</string>
+    <string name="bit_rate">Bitrate</string>
+    <string name="delete_file">" Do you want delete this file?"</string>
+    <string name="No">No</string>
+    <string name="yes">Yes</string>
+
+
+    <string name="account_balance">Account Balance</string>
+    <string name="balance_currency">$</string>
+    <string name="balance_amount">524.99</string>
+
+    <string name="feed_back_thank">Thank your feedback</string>
+    <string name="Voice_changer">Voice changer</string>
+    <string name="title_feedback">FeedBack</string>
+    <string name="hint_feedback">Write your content here</string>
+    <string name="sen">Send</string>
+    <string name="Please_click_BACK">Please click BACK again to exit</string>
+    <string name="No_pemission">No microphone permission</string>
+    <string name="Next">Next</string>
+    <string name="Finish">Finish</string>
+    <string name="nameIsEmpty">File name cannot be empty</string>
+    <string name="nameAlready">File name already exists</string>
+    <string name="stop_file">Do you want to stop?</string>
+    <string name="failed">Failed</string>
+    <string name="timeDefault">00:00</string>
+    <string name="Parent_folder">Parent folder</string>
+    <string name="o">0</string>
+
+    <string name="Premium">Premium</string>
+    <string name="title_sub">3 days free trial with\npremium feature!</string>
+    <string name="Premium_Features">Premium Features for New User</string>
+    <string name="Remove_Ads">Remove Ads</string>
+    <string name="txt_ads">50+ Premium Voice Effects</string>
+    <string name="txt_ads3">High Quality Sound</string>
+    <string name="txt_ads4">Unlimited Record Time</string>
+    <string name="txt_ads5"><![CDATA[Save & Share as MP3]]></string>
+    <string name="txt_ads6">Unlock All Features</string>
+    <string name="Continue_To_Trial">"Continue To Trial "</string>
+    <string name="titlePice">This subscription automatically renews for — after 03 days free trial. You can cancel anytime</string>
+    <string name="titlePiceFrm">This subscription automatically renews for %s after 03 days free trial. You can cancel anytime</string>
+    <string name="Just_one_last_step">Just one last step</string>
+    <string name="title2">"Premium features are Free to try now. \nYou can cancel it at any time "</string>
+    <string name="Start_03_Days_Free_Trial">Start 03 Days Free Trial</string>
+    <string name="Start_Your_Free_Trial">Start Your Free Trial</string>
+
+
+</resources>

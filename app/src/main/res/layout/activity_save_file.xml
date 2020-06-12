@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.audioeffect.voicechanger.ui.activities.SaveFileActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:ignore="UselessLeaf">
+
+        <ImageView
+            android:id="@+id/imgBackEffect"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:padding="17dp"
+            app:srcCompat="@drawable/ic_back"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/imgBackEffect"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/toolbar_SaveFile"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtLocked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlToolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/Locked"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtLocked"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="37dp"
+        android:ellipsize="middle"
+        android:fontFamily="@font/roboto_regular"
+        android:singleLine="true"
+        android:textColor="#8C8C8C"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/prSaveFile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/txtName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp">
+
+        <io.netopen.hotbitmapgg.library.view.RingProgressBar
+            android:id="@+id/pgDownloadPl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            app:max="1000"
+            app:ringColor="#D1D1D6"
+            app:ringProgressColor="#0064FF"
+            app:ringWidth="3dp"
+            app:style="STROKE"
+            app:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/txtProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="0%"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imgPlay"
+            android:layout_width="26dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:layout_marginStart="40dp"
+            app:srcCompat="@drawable/ic_play_done"
+            tools:ignore="VectorDrawableCompat" />
+
+        <ImageView
+            android:id="@+id/imgPause"
+            android:layout_width="21dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/ic_pause_proccessing"
+            tools:ignore="VectorDrawableCompat" />
+
+        <ImageView
+            android:id="@+id/imgFailed"
+            android:layout_width="26dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_alert_faild"
+            tools:ignore="VectorDrawableCompat" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/prSaveFile"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="37dp"
+        android:background="@drawable/rip_cancel_save">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/camcel"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/custom_image_close"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_close"
+            tools:ignore="VectorDrawableCompat" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/saveSuccess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prSaveFile"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="37dp"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rip_share">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/share"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/custom_image_close"
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_st_share"
+                tools:ignore="VectorDrawableCompat" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/btnNewVoice"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btnShare"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rip_share">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/new_Voice"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/custom_image_close"
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_record"
+                tools:ignore="VectorDrawableCompat" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/saveFailed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prSaveFile"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="37dp"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:id="@+id/btnTryAgain"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rip_share">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/try_Again"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/custom_image_close"
+                app:srcCompat="@drawable/ic_tryagain"
+                tools:ignore="VectorDrawableCompat" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+    </RelativeLayout>

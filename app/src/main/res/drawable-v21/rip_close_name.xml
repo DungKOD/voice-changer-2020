@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:color="#C7C7CC"
+        tools:targetApi="lollipop">
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="#C7C7CC" />
+            <corners android:radius="20dp"/>
+        </shape>
+    </item>
+
+
+    <item android:id="@+id/btnCheckPer">
+        <shape android:shape="rectangle">
+            <solid android:color="#59C7C7CC"/>
+            <corners android:radius="20dp"/>
+        </shape>
+    </item>
+</ripple>

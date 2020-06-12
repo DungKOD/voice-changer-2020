@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_step"
+    tools:context="com.audioeffect.voicechanger.ui.activities.StepActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPageIntro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/rlViewText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/custom_step_radius"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"/>
+
+    <TextView
+        android:id="@+id/txtTitleTep"
+        app:layout_constraintTop_toTopOf="@+id/rlViewText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:text="@string/step_titleOne"
+        android:layout_width="wrap_content"
+        android:textSize="15sp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        app:layout_constraintTop_toTopOf="@+id/rlViewText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="50dp"
+        android:background="@drawable/custom_start_step"
+        android:layout_marginStart="20dp"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/txtStep"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            android:text="1"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btnStatus"
+        app:layout_constraintTop_toTopOf="@+id/rlViewText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rip_close"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/txtNext"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_centerHorizontal="true"
+            android:text="@string/Next"
+            android:textAllCaps="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:ci_animator="@anim/indicator_scall"
+        app:ci_drawable_unselected="@drawable/indicator"
+        app:ci_drawable="@drawable/indicator_select"
+        app:ci_height="4dp"
+        app:ci_width="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/rlViewText"
+        android:layout_marginBottom="20dp"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

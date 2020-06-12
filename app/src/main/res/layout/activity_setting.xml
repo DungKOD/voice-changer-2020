@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_writeaudio">
+
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="27dp"
+        android:padding="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <LinearLayout
+        android:layout_marginTop="45dp"
+        app:layout_constraintTop_toBottomOf="@+id/imgClose"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/btnHowToUser"
+            android:orientation="horizontal"
+            android:background="@drawable/rip_setting"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_st_howtouse"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorWhite"
+                android:text="@string/how_to_use"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rip_setting"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_st_policy"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorWhite"
+                android:text="@string/Privacy_Policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:id="@+id/btnShare"
+            android:orientation="horizontal"
+            android:background="@drawable/rip_setting"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_st_share"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorWhite"
+                android:text="@string/Share_to_friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rip_setting"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_st_feedback"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorWhite"
+                android:text="@string/Feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnRate"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rip_setting"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_st_rate"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorWhite"
+                android:text="@string/Rate_us_5_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnAbout"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rip_setting"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_st_about"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorWhite"
+                android:text="@string/About"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
